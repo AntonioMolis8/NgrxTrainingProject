@@ -1,0 +1,14 @@
+<div class="task-list-container">
+    <h2 class="task-list-title">List of tasks: {{(tasks | async)?.length}}</h2>
+
+    <ul class="task-list">
+        @for (task of tasks | async; track task.id) {
+            <li>
+                <span> {{task.title}} </span>
+                <button (click)="deleteTask(task)" class="remove-button">
+                Delete
+                </button>
+            </li>
+        }
+    </ul>
+</div>

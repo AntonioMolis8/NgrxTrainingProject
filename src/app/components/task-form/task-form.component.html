@@ -1,0 +1,10 @@
+<div class="form-container">
+    <h2 class="form-title">Add a new task</h2>
+    <form>
+        <p>id: <input type="text" name="task_id" [(ngModel)]="task.id"></p>
+        <p>title: <input type="text" name="task_title" [(ngModel)]="task.title"></p>
+        <p>user id: <input type="text" name="task_user" [(ngModel)]="task.userId"></p>
+        <button class="form-submit" (click)="addTask(task)">Add task</button>
+    </form>
+</div>
+
