@@ -16,12 +16,7 @@ import { FormsModule } from '@angular/forms';
 
 export class TaskFormComponent {
 
-  task: Task = {
-    id: 0,
-    userId: 0,
-    title: "string",
-    completed: false
-  };
+  task: Task = {} as Task;
 
   constructor(private store: Store<MyAppState>) {}
 
