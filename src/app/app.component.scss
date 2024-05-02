@@ -1,7 +1,21 @@
-.task-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(175, 222, 255);
-    padding: 20px;
-  }
+.container {
+  min-height: 100vh;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0)), url("../assets/img/software.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+}
+
+.content {
+  // 100vh - header height - footer height - router-oulet
+  min-height: calc(100vh - (60px + 50px + 1rem) - (75px + 42px + 1.5rem) - 1rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}

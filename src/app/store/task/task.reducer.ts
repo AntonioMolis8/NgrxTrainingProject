@@ -1,5 +1,5 @@
-import { Action } from "../../models/interfaces/action.interface";
-import { Task } from "../../models/interfaces/task.interface";
+import { Action } from "../../models/action.interface";
+import { Task } from "../../models/task.interface";
 import { ACTIONS } from "./task.actions";
 
 export function task_reducer(state: Array<Task> = [], action: Action ) {

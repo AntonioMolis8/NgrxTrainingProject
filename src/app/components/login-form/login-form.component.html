@@ -1,0 +1,34 @@
+<div class="form-wrapper">
+    <header>
+      <h2>Login</h2>
+    </header>
+    <main>
+      <form>
+          <div class="order-reverse">
+              <input type="text" name="user-name" id="name" placeholder="name" autofocus required [(ngModel)]="user.name">
+              <label for="name">Name</label>
+              <span> - </span>
+          </div>
+          <div class="order-reverse">
+              <input type="password" name="user-password" id="password" placeholder="password" required [(ngModel)]="user.password">
+              <label for="password">Password</label>
+              <span> - </span> <!-- Para igualar el espaciado -->
+          </div>
+        <div class="buttons">
+          <a routerLink="{{route}}">
+            <button type="submit" (click)="login()">Login</button>
+          </a>
+        </div>
+      </form>
+      <p class="alert" *ngIf="usernameAlert">{{usernameAlert}}</p>
+      <p class="alert" *ngIf="passwordAlert">{{passwordAlert}}</p>
+    </main>
+  </div>
+
+  <p *ngIf="false; else elseBlock">Never shown</p>
+  <ng-template #elseBlock>
+      <p class="elseText">This is just an example of "NG-TEMPLATE"</p>
+  </ng-template>
+
+  <ng-content select=".exampleText"></ng-content>
+

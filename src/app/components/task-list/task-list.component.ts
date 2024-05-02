@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Task } from '../../models/interfaces/task.interface';
+import { Task } from '../../models/task.interface';
 import { Store } from '@ngrx/store';
 import { MyAppState } from '../../store/app.state';
 import { ACTIONS } from '../../store/task/task.actions';
 import { AsyncPipe} from '@angular/common';
-import { Action } from '../../models/interfaces/action.interface';
+import { Action } from '../../models/action.interface';
 
 @Component({
   selector: 'app-task-list',

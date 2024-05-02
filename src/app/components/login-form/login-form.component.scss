@@ -1,0 +1,180 @@
+$white-color: rgba(255,255,255,0.75);
+$text-color: #00025b;
+$blue-color: #007ca1;
+$red-color: red;
+
+
+.form-wrapper {
+    width: 310px;
+    margin: 20px 0px 40px;
+    padding: 25px;
+    border-radius: 20px;
+    background-color: $white-color;
+    box-shadow: 0 0 10px #fff;
+
+    header {
+        margin-bottom: 1.2rem;
+    }
+    
+    h2 {
+        text-align: center;
+        font-weight: 700;
+    }
+    
+    h2, p, label, input {
+        color: $text-color;
+    }
+    
+    .order-reverse {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: -0.9rem 0rem 1.5rem;
+        position: relative;
+    }
+    
+    
+    // INPUTS Y ETIQUETAS
+    // Damos formato a los inputs y sus etiquetas
+
+    input {
+        margin: 0.25rem 0 1rem;
+        padding: 5px 0px;
+        border: 1px $text-color;
+        background-color: transparent;
+        border-style: none none solid none;
+
+        & + label {
+            font-weight: 700;
+            text-transform: uppercase;
+            position: absolute;
+            top: 0.3rem;
+            font-size: 0.75rem;
+            width: max-content;
+        }
+    
+        // Ponemos el '*' al final de la etiqueta en los campos requeridos
+        &:required + label::after {
+            content: " *";
+            color: $blue-color;
+            font-weight: 700;
+        }
+    
+        // Efectos cuando se pone el foco en los inputs
+        &:focus {
+            outline: none;
+            border: 1px solid $blue-color;
+        }
+    
+        // Efectos cuando se pone el foco en los inputs
+        &:focus{
+            border-style: none none solid none;
+        }
+    
+        // Cambio de posición de las etiquetas
+        &::placeholder {
+            color: transparent;  
+        }
+    
+        &:placeholder-shown + label {
+            top: 1.5rem;
+            font-size: 1rem;
+            font-weight: 400;
+            border: none;
+            opacity: .65;
+            transition: all .5s;
+            cursor: text;
+        }
+        
+        &:focus + label {
+            top: 0.3rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: $blue-color;
+            border: 1px $blue-color;
+            opacity: 1;
+            transition: all .5s;
+        }
+    
+        // Estilos para inputs invalidos
+        /* &:invalid:not(&:placeholder-shown):not(&:focus) {
+            border: 1px $red-color;
+            border-style: none none solid none;
+            transition: all .4s;
+        }
+        
+        &:invalid:not(&:placeholder-shown):not(&:focus) + label{
+            color: $red-color;
+            transition: all .4s;
+        }
+        
+        &:invalid:not(&:placeholder-shown):not(&:focus) + label::after{
+            color: $red-color;
+            transition: all .4s;
+        }
+        
+        &:invalid:not(&:placeholder-shown):not(&:focus) ~ span {
+            opacity: 0;
+            transition: opacity .4s;
+        } */
+    
+        // Quitamos la sombra del autocompletado
+        &:-webkit-autofill {
+            //box-shadow: 0 0 0 1.2rem transparent inset;
+            // NO CONSIGO QUE FUNCIONE CON TRANSPARENCIA ASÍ QUE LE METERÉ UN DELAY
+            transition-delay: 3600s;
+        }
+    
+    }
+    
+    span {
+        width: max-content;
+        color: $red-color;
+        font-size: 0.8rem;
+        position: relative;
+        top: 3.2rem;
+        opacity: 0;
+        transition: opacity .4s;
+    }
+    
+    // MENSAJES DE ALERTA
+    .alert {
+        font-size: 0.9rem;
+        font-style: italic;
+        font-weight: 600;
+        margin: 0px;
+        color: red;
+    }
+    
+    // BOTONES
+    .buttons {
+        margin: 1rem 0rem;
+        display: flex;
+        justify-content: space-around;
+        
+        a{
+            width: 45%;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px 0px;
+            text-transform: uppercase;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            background-color: $blue-color;
+            color: rgba(255,255,255,0.85);
+            transition: all .4s;
+    
+            &:hover {
+                box-shadow: 0 0 10px rgba(255,255,255,0.85);;
+                background-color: #0e8eb5;
+                transition: all .3s;
+            }
+        }
+    }
+}
+
+.elseText {
+    text-align: center;
+}

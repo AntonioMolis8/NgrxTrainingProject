@@ -1,4 +1,4 @@
-import { Task } from "../models/interfaces/task.interface";
+import { Task } from "../models/task.interface";
 
 export interface MyAppState {
     tasks: Array<Task>

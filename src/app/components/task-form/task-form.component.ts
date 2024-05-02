@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { Task } from '../../models/interfaces/task.interface';
+import { Task } from '../../models/task.interface';
 import { Store } from '@ngrx/store';
 import { MyAppState } from '../../store/app.state';
-import { Action } from '../../models/interfaces/action.interface';
+import { Action } from '../../models/action.interface';
 import { ACTIONS } from '../../store/task/task.actions';
 import { FormsModule } from '@angular/forms';
 
