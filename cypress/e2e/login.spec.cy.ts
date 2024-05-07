@@ -1,10 +1,11 @@
 describe('Login', () => {
-  it('Initial page should be login page', () => {
+  beforeEach(() => {
     cy.visit('/')
+  })
+  it('Initial page should be login page', () => {
     cy.contains('Login')
   })
   it('Should not login if the form is invalid', () => {
-    cy.visit('/')
     cy.get('button').click();
     cy.url().should('not.include','home')
     cy.login('Antonio', '12')
